@@ -27,7 +27,7 @@
                exit(0);
             }
             elseif($_SESSION["auth_role"] == 0) {
-               $_SESSION["thongbao"]="Xin Chao admin";
+               $_SESSION["thongbao"]="Xin Chao user";
                header('location:index.php');
                exit(0);
             }
