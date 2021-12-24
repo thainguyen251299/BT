@@ -3,17 +3,17 @@
      include('includes/header.php');
 ?>
 <div class="container-fluid px-4">
-     <h1 class="mt-4">Quản lý phòng trọ</h1>
+     <h1 class="mt-4">Duyệt bài đăng</h1>
      <ol class="breadcrumb mb-4">
           <li class="breadcrumb-item active">Trang Admin</li>
-          <li class="breadcrumb-item">Quản lý phòng trọ</li>
+          <li class="breadcrumb-item">Duyệt bài đăng</li>
      </ol>
      <div class="row">
           <div class="col-md-12">
                <?php include('message.php'); ?>
                <div class="card">
                     <div class="card-header">
-                         <h4>Phòng trọ
+                         <h4>Duyệt bài
                               <a href="ptro-add.php" class="btn btn-primary float-end"> Đăng bài </a>
                          </h4>
                     </div>
