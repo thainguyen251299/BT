@@ -32,7 +32,7 @@
           $sqls = "insert into motel (title,description,price,area,count_view,address,latlng,images,user_id,category_id,districi_id,utilities,phone,approve) values('$title','$description','$price','$area','','$address','','$target_file','$user','$category_id','$district_id','$utilities','$phone','')";
           $querys = mysqli_query($con,$sqls);
           if($querys){
-               $_SESSION['thongbao'] = "Thêm bài đăng thành công";
+               $_SESSION['thongbao'] = "Bài đăng cần được duyệt";
                header("location:view_ptro.php");
                exit(0);
           }
