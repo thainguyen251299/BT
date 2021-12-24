@@ -3,18 +3,18 @@
      include('includes/header.php');
 ?>
 <div class="container-fluid px-4">
-     <h1 class="mt-4">Quản lý user</h1>
+     <h1 class="mt-4">Quản lý phòng trọ</h1>
      <ol class="breadcrumb mb-4">
           <li class="breadcrumb-item active">Trang Admin</li>
-          <li class="breadcrumb-item">Quản lý user</li>
+          <li class="breadcrumb-item">Quản lý phòng trọ</li>
      </ol>
      <div class="row">
           <div class="col-md-12">
                <?php include('message.php'); ?>
                <div class="card">
                     <div class="card-header">
-                         <h4>Người dùng
-                              <a href="register-add.php" class="btn btn-primary float-end"> Thêm người dùng</a>
+                         <h4>Phòng trọ
+                              <a href="ptro-add.php" class="btn btn-primary float-end"> Đăng bài </a>
                          </h4>
                     </div>
                     <div class="card-body">
@@ -22,43 +22,51 @@
                               <thead>
                                    <tr>
                                         <th>id</th>
-                                        <th>Name</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <th>Roles</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Price</th>
+                                        <th>Area</th>
+                                        <th>Count_view</th>
+                                        <th>Address</th>
+                                        <th>images</th>
+                                        <th>utillities</th>
                                         <th>Phone</th>
-                                        <th>Avatar</th>
+                                        <th>approve</th>
+                                        <th>created_at</th>
                                         <th>Sua</th>
                                         <th>Xoa</th>
                                    </tr>
                               </thead>
                               <tbody>
                                    <?php
-                                        $sql = "SELECT * FROM user";
+                                        $sql = "SELECT * FROM motel where approve = 1";
                                         $user = mysqli_query($con, $sql);
                                         if(mysqli_num_rows($user) > 0){
                                              foreach($user as $row){
                                                   ?>
                                                        <tr>
                                                             <td><?= $row['id']; ?></td>
-                                                            <td><?= $row['Name']; ?></td>
-                                                            <td><?= $row['Username']; ?></td>
-                                                            <td><?= $row['email']; ?></td>
+                                                            <td><?= $row['title']; ?></td>
+                                                            <td><?= $row['description']; ?></td>
+                                                            <td><?= $row['price']; ?></td>
+                                                            <td><?= $row['area']; ?></td>
+                                                            <td><?= $row['count_view']; ?></td>
+                                                            <td><?= $row['address']; ?></td>
+                                                            <td><img src="<?= $row["images"]?>" width="100px" height="100px"></td>
+                                                            <td><?= $row['utilities']; ?></td>
+                                                            <td><?= $row['phone']; ?></td>
                                                             <td>
                                                                  <?php
-                                                                 if($row['role'] == '1'){
-                                                                      echo 'Admin';
-                                                                 }elseif($row['role'] == '0'){
-                                                                      echo 'User';
+                                                                  if($row['approve'] == '1'){
+                                                                      echo 'Đã duyệt';
                                                                  }
                                                                  ?>
                                                             </td>
-                                                            <td><?= $row['phone']; ?></td>
-                                                            <td><img src="<?= $row["avatar"]?>" width="60px" height="60px"></td>
-                                                            <td><a href="register-edit.php?id=<?= $row["id"]; ?>" class="btn btn-success">Sua</a></td>
+                                                            <td><?= $row['created_at']; ?></td>
+                                                            <td><a href="edit-ptro.php?id=<?= $row["id"]; ?>" class="btn btn-success">Sua</a></td>
                                                             <td>
                                                                  <form action="code.php" method="POST">
-                                                                      <button type="submit" name="user_del" value="<?= $row["id"]; ?>" class="btn btn-danger">Xoa</button>
+                                                                      <button type="submit" name="ptro_del" value="<?= $row["id"]; ?>" class="btn btn-danger">Xoa</button>
                                                                  </form>
                                                             </td>
                                                        </tr>
@@ -68,7 +76,7 @@
                                         else{
                                         ?>
                                              <tr>
-                                                  <td colspan="8">ko co du lieu</td>
+                                                  <td colspan="14">ko co du lieu</td>
                                              </tr>
                                         <?php
                                         }
