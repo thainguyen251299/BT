@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 24, 2021 lúc 03:54 PM
+-- Thời gian đã tạo: Th12 25, 2021 lúc 10:03 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 7.4.23
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `login`
+-- Cơ sở dữ liệu: `loginn`
 --
 
 -- --------------------------------------------------------
@@ -130,8 +130,8 @@ INSERT INTO `user` (`id`, `Name`, `Username`, `email`, `password`, `role`, `phon
 (5, 'vuml', 'vuml', 'mlvu@gmail.com', '202cb962ac59075b964b07152d234b70', 0, '123456', 'image/images.jpg'),
 (10, '1', '1111', '1', '40f5888b67c748df7efba008e7c2f9d2', 0, '2', 'image/bbb.jpg'),
 (12, '333', '333', '333', '310dcbbf4cce62f762a2aaa148d556bd', 0, '333', 'image/235639605_263855361968399_4055670547543296691_n.jpg'),
-(13, 'nguyen huu thai', 'nhthai', 'hhhh@gmail.com', '202cb962ac59075b964b07152d234b70', 0, '0352609986', 'image/aaa.jpg'),
-(15, 'thai', 'thaidz', 'thai@gmail.com', '63ee451939ed580ef3c4b6f0109d1fd0', 1, '25415989', 'image/49029681_907961836261444_3841281516747358208_n.jpg');
+(13, 'nguyen huu thai', 'nhthai', 'hhhh@gmail.com', '202cb962ac59075b964b07152d234b70', 1, '0352609986', 'image/aaa.jpg'),
+(15, 'thai', 'thaidz', 'thai@gmail.com', '4297f44b13955235245b2497399d7a93', 1, '25415989', 'image/49029681_907961836261444_3841281516747358208_n.jpg');
 
 --
 -- Chỉ mục cho các bảng đã đổ
