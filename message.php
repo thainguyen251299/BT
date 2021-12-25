@@ -3,5 +3,6 @@ if(isset($_SESSION['thongbao'])){
      ?>
      <h4> <?= $_SESSION['thongbao']; ?></h4>
      <?php
+      unset($_SESSION['thongbao']);
 }
 ?>

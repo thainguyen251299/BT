@@ -13,12 +13,7 @@
 <body>
 <h2>Dang Nhap</h2>
 <p>
-  <?php
-      if(isset($_SESSION["thongbao"])){
-        echo $_SESSION["thongbao"];
-        unset($_SESSION['thongbao']);
-      }
-  ?>
+<?php include('message.php'); ?>
 </p>
 <form action="logincode.php" method="post">
   <form action="index.php" method="get">
